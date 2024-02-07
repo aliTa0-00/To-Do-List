@@ -1,0 +1,87 @@
+
+.hide-when-mobile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+@keyframes down{
+  0%{
+      transform: translateY(-100px);
+  }
+
+  100%{
+      transform: translateY(0);
+  }
+}
+
+
+header{
+  animation: down 1s 1;
+}
+
+
+
+.main-link {
+  padding: 8px 15px;
+}
+
+
+.main-link:hover , .main-link.active{
+  color: cyan;
+  box-shadow: 0 0 5px cyan;
+  border-radius: 5px;
+}
+/* ==================
+    3. header of mobile
+===================== */
+.show-when-mobile {
+  display: none;
+}
+
+
+@media (max-width: 800px) {
+  .show-when-mobile {
+    display: block;
+  }
+  
+  .hide-when-mobile {
+    display: none;
+  }
+}
+
+/* lang-box */
+
+ul.lang-box{
+  display: none;
+  position: absolute;
+  background-color: #1b1b1b;
+  border-top: 1px solid cyan;
+  width: 130px;
+  border-radius: 5px;
+  left: -16px;
+  top: 47px;
+  z-index: 6;
+}
+li.lang:hover ul.lang-box{
+  display: block;
+}
+.lang-box li{
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 8px;
+  text-align: start;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  transition: all .2s;
+}
+ul.lang-box li:hover {
+  background-color: #151515;
+  font-size: 15px;
+}
+.main-list {
+  padding: 10px 15px 14px;
+  position: relative;
+}
